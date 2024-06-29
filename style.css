@@ -5,6 +5,8 @@
 
 body {
     height: 80vh;
+    display: flex;
+    flex-direction: column;
 }
 .container {
     display: flex;
@@ -25,7 +27,26 @@ body {
 }
 
 .arriba {
+    display: flex;
     background-color: grey;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 600px;
+    height: 30px;
+    padding-block: 0;
+    padding-inline: 0;
+    border: 1px solid black;
+}
+
+button {
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    padding-block: 0;
+    padding-inline: 0;
 }
 
 .izquierda, .derecha, .arriba {
