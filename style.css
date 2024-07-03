@@ -60,3 +60,7 @@ button {
 li {
     list-style: none;
 }
+
+h1 {
+    margin-bottom: 20px;
+}
