@@ -28,17 +28,16 @@ jsonContentData.forEach(item => {
 });
 let terminoBuscado = document.getElementById("busqueda");
 let botonBusqueda = document.getElementById("buscador");
-botonBusqueda.addEventListener('click', buscarTerminoYHighlight());
+botonBusqueda.addEventListener('click', buscarTerminoYHighlight);
 
 function buscarTerminoYHighlight(){
-jsonContentData.forEach(item => {
-    if (item.content.toLowerCase().includes(terminoBuscado.value)){
-        titleChosen.innerHTML = item.title;
-        contentChosen.innerHTML = item.content; 
-    } 
-})
-
-};
-
-
+        jsonContentData.forEach(item => {
+            let content = item.content.toLowerCase();
+            term = terminoBuscado.value.toLowerCase();
+            if (content.includes(term)){
+            titleChosen.innerHTML = item.title;
+            contentChosen.innerHTML = item.content; 
+            } 
+        })
+    };
 })
