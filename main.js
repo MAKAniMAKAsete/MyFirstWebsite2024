@@ -12,7 +12,8 @@ const jsonContentData = [
 
 //looks for side menu 
 let menu = document.getElementById('menu');
-
+let titleChosen = document.getElementById('tituloElegido');
+let contentChosen = document.getElementById('contenidoElegido');
 //fills up side menu with the json titles
 jsonContentData.forEach(item => {
     const liItem = document.createElement('li');
@@ -21,14 +22,23 @@ jsonContentData.forEach(item => {
     liItem.addEventListener('click', () => {
 
         //now look for container to fill with title and content
-let titleChosen = document.getElementById('tituloElegido');
-let contentChosen = document.getElementById('contenidoElegido');
-
         titleChosen.innerHTML = item.title;
         contentChosen.innerHTML = item.content;
     })
 });
+let terminoBuscado = document.getElementById("busqueda");
+let botonBusqueda = document.getElementById("buscador");
+botonBusqueda.addEventListener('click', buscarTerminoYHighlight());
 
+function buscarTerminoYHighlight(){
+jsonContentData.forEach(item => {
+    if (item.content.toLowerCase().includes(terminoBuscado.value)){
+        titleChosen.innerHTML = item.title;
+        contentChosen.innerHTML = item.content; 
+    } 
+})
+
+};
 
 
 })

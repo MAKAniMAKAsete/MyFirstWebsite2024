@@ -5,9 +5,9 @@
 
 body {
     height: 80vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 .container {    
     display: flex;
@@ -30,14 +30,13 @@ body {
 
 .arriba {
     height: 50px;
-    width: 100vw;
     display: flex;
     background-color: grey;
     align-items: center;
     justify-content: center;
 }
 
-input {
+#busqueda {
     width: 600px;
     height: 30px;
     padding-block: 0;
@@ -45,7 +44,7 @@ input {
     border: 1px solid black;
 }
 
-button {
+#buscador {
     width: 200px;
     height: 30px;
     border: 1px solid black;
